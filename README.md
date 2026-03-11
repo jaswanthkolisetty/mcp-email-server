@@ -1,6 +1,6 @@
 # MCP Email Server
 
-A personal email assistant that connects **Claude AI** to your **Microsoft Outlook mailbox** and **OneDrive**. The server runs remotely on **Azure** — your computer just needs internet access.
+A personal email assistant that connects **Claude AI** to your **Microsoft Outlook mailbox** and **OneDrive**. The server runs remotely on **Azure**  your computer just needs internet access.
 
 Once set up, you can ask Claude things like:
 
