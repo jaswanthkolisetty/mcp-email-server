@@ -1,8 +1,8 @@
-# Personal MCP Server — Microsoft 365 + Cowork
+# Personal MCP Server - Microsoft 365 + Cowork
 
-> Connect your AI to everything Microsoft 365 has to offer. Read emails, manage files, query calendars, search across your organization — all through natural conversation in Cowork.
+> Connect your AI to everything Microsoft 365 has to offer. Read emails, manage files, query calendars, search across your organization, all through natural conversation in Cowork.
 
-This project is a personal Model Context Protocol (MCP) server that bridges **Cowork's agentic AI** with the **Microsoft Graph API**. It runs on Azure, stays online 24/7, and gives your AI real access to your Microsoft 365 workspace — not just summaries or previews, but actual data it can reason over, act on, and help you with.
+This project is a personal Model Context Protocol (MCP) server that bridges **Cowork's agentic AI** with the **Microsoft Graph API**. It runs on Azure, stays online 24/7, and gives your AI real access to your Microsoft 365 workspace not just summaries or previews, but actual data it can reason over, act on, and help you with.
 
 The current implementation focuses on email and OneDrive. The architecture is built to extend to anything Microsoft Graph exposes: Calendar, Teams, SharePoint, Contacts, Planner, and beyond.
 
@@ -16,7 +16,7 @@ This changes that.
 
 When Cowork is connected to your MCP server, it has direct, live access to your actual data. You stop being a middleman. Instead of you bringing information to the AI, the AI reaches into your systems, finds what it needs, and acts on your behalf.
 
-That shift — from assistant to agent — is where the real productivity gains are.
+That shift from assistant to agent is where the real productivity gains are.
 
 ---
 
@@ -35,21 +35,21 @@ Once a file is in OneDrive, Cowork can open it and read the contents — PDFs, W
 
 ---
 
-## Real Scenarios — What This Looks Like in Practice
+## Real Scenarios - What This Looks Like in Practice
 
-**Scenario 1 — The Weekly Vendor Review**
+**Scenario 1 - The Weekly Vendor Review**
 A procurement manager receives dozens of invoices every week from different suppliers. Instead of opening each one, downloading attachments, and manually checking figures, they open Cowork and say: "Pull all invoices received this month, download them, and give me a summary of total amounts by vendor." Cowork does it in under a minute. What used to take an hour is done before the first coffee.
 
-**Scenario 2 — The Contract Audit**
+**Scenario 2 - The Contract Audit**
 A legal team needs to review all contracts signed in Q1. The contracts are scattered across email attachments from multiple senders. A paralegal tells Cowork: "Find all emails from our external counsel between January and March that have PDF attachments, download them, and flag any that mention termination clauses." Cowork searches, downloads, reads each document, and returns a structured report.
 
-**Scenario 3 — The Sales Follow-Up**
+**Scenario 3 - The Sales Follow-Up**
 A sales representative has been in back-and-forth emails with a prospect for two weeks. Before a big call, they ask Cowork: "Summarize everything exchanged with this prospect, pull any documents they sent, and highlight any commitments we made." Cowork reads the entire thread and the attachments, then gives a clean briefing in seconds.
 
-**Scenario 4 — The Executive Briefing**
+**Scenario 4 - The Executive Briefing**
 A chief of staff needs a Monday morning summary for the executive team. They set up a recurring Cowork task: every Monday at 8am, search all emails from the weekend across key domains, pull any attachments, and generate a structured briefing document. It is waiting in OneDrive before anyone walks into the office.
 
-**Scenario 5 — The Compliance Check**
+**Scenario 5 - The Compliance Check**
 A compliance officer needs to verify that all required reports were submitted on time. They ask Cowork: "Find every email from our reporting team in the last quarter that contains an Excel attachment, download them all, and confirm the submission dates match our schedule." Cowork cross-references the email timestamps with the file contents and flags any gaps.
 
 ---
@@ -128,11 +128,11 @@ OneDrive/
 
 The current tools cover email and files. Microsoft Graph exposes far more, and this server is designed to grow. Adding a new capability means writing one function. Some natural extensions:
 
-- **Calendar** — let Cowork read your schedule, find free slots, summarize upcoming meetings
-- **Teams** — search messages, pull files shared in channels
-- **SharePoint** — query document libraries across your organization
-- **Contacts** — look up colleagues, enrich email context with org data
-- **Planner / Tasks** — create and track tasks from email conversations automatically
+- **Calendar** - let Cowork read your schedule, find free slots, summarize upcoming meetings
+- **Teams** - search messages, pull files shared in channels
+- **SharePoint** - query document libraries across your organization
+- **Contacts** - look up colleagues, enrich email context with org data
+- **Planner / Tasks** - create and track tasks from email conversations automatically
 
 Each of these follows the same pattern already established here: authenticate once via Azure AD, call the Graph API, return structured data to Cowork.
 
