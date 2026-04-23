@@ -1,4 +1,4 @@
-# Personal MCP Server - Microsoft 365 + Cowork
+# Personal MCP Server - Microsoft 365 + Claude
 
 > Connect your AI to everything Microsoft 365 has to offer. Read emails, manage files, query calendars, search across your organization, all through natural conversation in Cowork.
 
